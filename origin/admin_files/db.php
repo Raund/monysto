@@ -1,8 +1,8 @@
 <?
-$server   = "icase.mysql.ukraine.com.ua";
-$database = "icase_monysto";
-$username = "icase_monysto";
-$password = "lmmjpz64";	
+$server   = "localhost";
+$database = "icase_monysto_db";
+$username = "root";
+$password = "";	
 	
 	
 $mysqlConnection = mysql_connect($server, $username, $password);
