@@ -1,0 +1,19 @@
+
+<?
+	$m = "Hi, my name Steve Jobs";
+
+$from='steve@apple.com';
+$to = 'krmrnk@ukr.net';
+$subject = 'Apple, Inc.';
+$headers = "From: " . $from . "\r\n";
+$headers .= "Reply-To: ". $from . "\r\n";
+//$headers .= "CC:boriskaborisenko@gmail.com\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+$message = $m;	
+mail($to, $subject, $message, $headers);
+
+echo 'send to: '.$to;
+
+?>

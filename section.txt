@@ -1,0 +1,179 @@
+<section class="creative">
+	<div class="crea_marker" style="position: absolute; width: 10px; height: 10px; background: red; margin-top: -10%; visibility: hidden;"></div>
+	<div class="overcreative off"></div>
+	
+	
+	
+	<div class="creative_bg_1">
+		
+			<div class="next_cont_s">
+				<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooperCreative"></a></div>
+				<div class="for_link"></div>
+				<div class="papa bouncex"></div>
+			</div>
+		    <div id="controlLooperCreative" data-looper="go" class="looper xfade superslide">
+    <div class="looper-inner">
+        
+        <div class="item"><div class="one_room_pic stx_1 test_5"></div></div>
+        <div class="item"><div class="one_room_pic stx_2 test_4"></div></div>
+        <div class="item"><div class="one_room_pic stx_3 test_3"></div></div>
+        <div class="item"><div class="one_room_pic stx_4 test_2"></div></div>
+        <div class="item"><div class="one_room_pic stx_5 test_1"></div></div>
+        
+    </div>
+   
+</div>
+
+		
+		<div class="creative_inner">
+		 <div class="creative_side">
+			 <div class="creative_float">
+				  <div class="float_cont">
+					  
+					  
+					  
+				     <!--<div class="toroom_c" id="f1"><?print $lang['VIEW_FAMILY']?></div>-->
+				     
+				    
+				     <div class="room_top">
+					     
+					 
+					       <div class="c_name"><?print $lang['STANDARD_ROOM_NAME']?></div>
+					        <div class="c_price"><?print $price['PRICE_STD']?> <span><?print $lang['CUR']?></span></div>
+					        <div class="clear"></div>
+					        
+				       
+					 
+						  <div id="d1" class="det_b">
+							  <div class="shd" id="t1"><?print $lang['SHOW']?></div>
+							  <div id="t2" class="shd off"><?print $lang['HIDE']?></div>
+						  </div>
+					    
+					     
+					     
+				     </div>
+				     
+				         <div class="creative_details off" id="cd1">
+					     
+				 
+				 <div class="inroom">
+					 <!--<div class="inroom_head"><?print $lang['IN_ROOM_HEADER']?>:</div>-->
+					  <?print $lang['ROOM_CONTENT_BLOCK_UL_LI']?>
+					
+					 
+					 <div class="clear"></div>
+				 </div>
+				 <div class="room_params">
+					 <div class="param"><?print $lang['ROOM_MAX']?>:<span>  <?print $lang['PERSONS']?> 3</span></div>
+					 <div class="param"><?print $lang['SQUARE']?>:<span> 22 <?print $lang['METERS']?></span></div>
+					 <div class="param"><?print $lang['RQ']?>:<span> 1 </span></div>
+					 <!--<div class="param"><span><?print $lang['F1']?></span></div>-->
+				 </div>
+				         </div>
+				     
+				     <div class="room_bot">
+				        <div class="c_res">
+					        <div class="one_book_2"><?print $lang['TO_BOOKING']?></div>
+				        </div>
+				     </div> 
+				     
+				    
+				   
+				   </div>  
+			 </div>
+		 </div>
+	 </div>
+		
+	 
+	 
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="creative_bg_2">
+		<div class="next_cont_s">
+				<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooperCreative2"></a></div>
+				<div class="for_link"></div>
+				<div class="papa bouncex"></div>
+			</div>
+		<div id="controlLooperCreative2" data-looper="go" class="looper xfade superslide">
+    <div class="looper-inner">
+        
+        <div class="item"><div class="one_room_pic stx_1 test_2"></div></div>
+        <div class="item"><div class="one_room_pic stx_2 test_1"></div></div>
+        <div class="item"><div class="one_room_pic stx_3 test_3"></div></div>
+        <div class="item"><div class="one_room_pic stx_4 test_4"></div></div>
+        <div class="item"><div class="one_room_pic stx_5 test_5"></div></div>
+        
+    </div>
+   
+</div>
+	 
+	 <div class="creative_inner">
+		 <div class="creative_side">
+			 <div class="creative_float">
+				  <div class="float_cont">
+					  
+					  
+					  
+				     <div class="toroom_c" id="f2"><?print $lang['VIEW_STANDARD']?></div>
+				     
+				    
+				     <div class="room_top">
+					     
+					 
+					       <div class="c_name"><?print $lang['FAMILY_ROOM_NAME']?></div>
+					        <div class="c_price"><?print $price['PRICE_FML']?> <span><?print $lang['CUR']?></span></div>
+					        <div class="clear"></div>
+					        
+				       
+					 
+						  <div id="d2" class="det_b">
+							  <div class="shd" id="t3"><?print $lang['SHOW']?></div>
+							  <div id="t4" class="shd off"><?print $lang['HIDE']?></div>
+						  </div>
+					    
+					     
+					     
+				     </div>
+				     
+				         <div class="creative_details off" id="cd2">
+					     
+				 
+				 <div class="inroom">
+					 <!--<div class="inroom_head"><?print $lang['IN_ROOM_HEADER']?>:</div>-->
+					  <?print $lang['FAMILY_ROOM_UL_LI']?>
+					
+					
+					 
+					 
+					
+					 
+					 <div class="clear"></div>
+				 </div>
+				 <div class="room_params">
+					 <div class="param"><?print $lang['ROOM_MAX']?>:<span> <?print $lang['PERSONS']?> 5 </span></div>
+					 <div class="param"><?print $lang['SQUARE']?>:<span> 34 <?print $lang['METERS']?></span></div>
+					 <div class="param"><?print $lang['RQ']?>:<span> 2 </span></div>
+					 <div class="param"><span><?print $lang['F2']?></span></div>
+				 </div>
+				         </div>
+				     
+				     <div class="room_bot">
+				        <div class="c_res">
+					        <div class="one_book_2"><?print $lang['TO_BOOKING']?></div>
+				        </div>
+				     </div> 
+				   
+				   </div>  
+			 </div>
+		 </div>
+	 </div>
+	</div>
+	
+	
+</section>

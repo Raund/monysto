@@ -1,0 +1,1076 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Моністо</title>
+<META HTTP-EQUIV="Content-language" CONTENT="ua-ua">
+<base href="/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Готель та піцерія Моністо."> 
+<meta name="keywords" content="готель, піца, Моністо"> 
+<meta name="viewport" content="width=1200, initial-scale=1" >
+<link href="css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="css/style2.css" rel="stylesheet" type="text/css" media="screen,print"/>
+<link href="css/animation.css" rel="stylesheet" type="text/css" media="screen"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.3.1/moment.min.js"></script>
+
+<link href="css/jquery.comiseo.daterangepicker.css" rel="stylesheet">
+<script src="js/jquery.comiseo.daterangepicker.js"></script>
+
+<script src="//yandex.st/jquery/cookie/1.0/jquery.cookie.min.js"></script>  
+
+<link href="css/looper.css" rel="stylesheet">
+<script src="js/looper.js"></script>
+
+<script src="js/video.js"></script>
+
+
+
+
+
+
+</head>
+
+
+<body>
+	
+
+	
+	
+	
+
+
+<div class="all_ok off">
+	                    <div class="message">Thank you!</div>
+	                    <div class="mes_comm">Our managers connect with you soon.</div>
+                    </div>
+	                <div class="ov"></div>
+	                <div class="ov2"></div>
+	                
+	                <script>
+		               // $('body').addClass('noflow');
+              //$('.all_ok').removeClass('off');
+              //$('.ov').fadeIn(400);
+              //$('.all_ok').addClass('fadeTop');
+	                </script>
+
+
+	
+<script>
+jQuery(document).ready(function($) {
+$("#clb1").submit(function() {
+var str = $(this).serialize();
+$.ajax({
+type: "POST",
+url: "/ok.php",
+data: str,
+success: function() {
+$('').html(result);
+}
+});
+return false;
+});
+});
+</script>
+	
+	
+	
+	<div class="top">
+		<div class="intop">
+			<div class="top_logo"></div>
+			<div class="nav">
+				<ul>
+					<li id="about">про готель</li>
+					<li id="toroom">номери</li>
+					<li id="tobook">забронювати</li>
+					<li id="contacts">контакти</li>
+					<li><a href="http://monysto.com/pizza/">піцерія</a></li>
+					
+					<li id="hot_offer" class="hot">акція</li>					
+					
+				</ul>
+			</div>
+			<div class="langs_sw">
+				<ul>
+					<li><a href="http://monysto.com/hotel/en/">en</a></li>
+					<li><a href="http://monysto.com/hotel/ua/">ua</a></li>
+					<li><a href="http://monysto.com/hotel/ru/">ru</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	
+	<script>      
+      $("#about").click(function() {
+	      $('#video').fadeOut(500);
+    $('html, body').animate({
+        scrollTop: $(".first_text").offset().top
+    }, 700);
+    
+});
+      $("#toroom").click(function() {
+	      $('#video').fadeOut(500);
+	$('html, body').animate({
+        scrollTop: $(".room_marker2").offset().top
+    }, 700);
+    
+});
+
+      $("#tobook").click(function() {
+	      $('#video').fadeOut(500);
+	$('html, body').animate({
+        scrollTop: $("#bookme").offset().top
+    }, 700);
+});
+
+      $("#contacts").click(function() {
+	      $('#video').fadeOut(500);
+	$('html, body').animate({
+        scrollTop: $("footer").offset().top
+    }, 700);
+});
+
+      $("#hot_offer").click(function() {
+	      //$('#video').fadeOut(500);
+	       setTimeout(function() {
+              $('body').addClass('noflow');
+              $('.popup').removeClass('off');
+              $('.ov2').fadeIn(400);
+              $('.popup').addClass('fadeTop');
+}, 100);
+});
+</script>
+
+	
+	
+	
+	
+	<section class="first">
+	  <div class="overfirst">
+		  <div class="ml"></div>
+		  <div class="swiper-pagination swiper-pagination-white superpages"></div>
+	  </div> 
+	  
+	  
+	  
+
+
+	  <div id="video">
+	   <div id="video-bg-container" class="full-screen hidden-phone" style="position:absolute!important; z-index:0;">
+        <video autoplay loop muted id="myVideo"  autobuffer preload="auto" poster="video/snow_bg.jpg">
+	        <source src="video/sn2.mp4" type="video/mp4">
+			<source src="video/sn2.ogv" type="video/ogg">
+			<source src="video/sn2.webm" type="video/webm">
+			<span class="no-video"></span>
+		</video>
+	   </div>
+      </div>
+      
+      <div class="startdown"><div class="mama bouncexdown"></div></div>
+<script>      
+      $(".startdown").click(function() {
+	      $('#video').fadeOut(500);
+    $('html, body').animate({
+        scrollTop: $(".first_text").offset().top
+    }, 700);
+    
+});
+</script>
+      
+      
+      <script>
+	$(document).ready(function () {
+    var video = $('#video');
+
+    $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        var z = $('.first_text').offset().top;
+
+        if (y >= z) {
+            video.addClass('off');
+            video.fadeOut(400);
+        }
+        else{
+            video.removeClass('off');
+            video.fadeIn(500);
+        }
+    });
+    });
+</script>
+	     
+	  <!--<div id="controlLooperX" data-looper="go" class="looper xfade">
+    <div class="looper-inner">
+        
+        <div class="item"><div class="one_room_pic st_1"></div></div>
+        <div class="item"><div class="one_room_pic st_2"></div></div>
+        <div class="item"><div class="one_room_pic st_3"></div></div>
+        <div class="item"><div class="one_room_pic st_4"></div></div>
+        <div class="item"><div class="one_room_pic st_5"></div></div>
+        
+    </div>
+   
+</div>-->
+		
+	</section>
+	<div class="under"></div>
+	
+	
+	
+		
+		
+		
+	<section class="first_text">
+		<div class="first_text_inner">
+			<div class="big_header_b">About hotel</div>
+			<div class="about_text_b">
+				Отель-пиццерия Monysto – это сбалансированное сочетание гуцульской культуры и европейского комфорта. Ощутите оптимальное соотношение цена-качество на крупнейшем горнолыжном курорте Украины. Окунитесь в атмосферу активного отдыха, потрясающей природы и настоящей итальянской кухни. 
+			</div>
+			<div class="orn"></div>
+		</div>
+	</section>	
+	
+		
+		
+		
+<section class="ttt">
+	<!--<div class="parallax"></div>-->
+<div id="startrates" style="position:absolute;z-index:5;  width: 455px; left:50%; margin-left: -228px; margin-top:490px; visibility: hidden; ">
+	 <div class="fsq_s"></div>
+	 <div class="bok_s"></div>
+	 <div class="clear"></div>
+	 
+</div>
+ 		      <script>
+	$(document).ready(function () {
+    var rmarker = $('.ttt');
+
+    $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        var z = $('.ttt').offset().top;
+
+        if (y >= z) {
+	        
+	         setTimeout(function(){ 
+            $('#startrates').addClass('slideUp3');
+             }, 0);
+             
+            
+        }
+        
+    });
+    });
+</script>
+
+
+<div class="next_cont_hotel_next">
+				<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooperX"></a></div>
+				<div class="for_link"></div>
+				<div class="papa bouncex"></div>
+			</div>
+			
+			<div class="next_cont_hotel_prev">
+				<div class="next_link"><a  data-looper="prev" class="superlink"  href="#controlLooperX"></a></div>
+				<div class="for_link"></div>
+				<div class="papa2 bouncex2"></div>
+			</div>
+
+
+<div id="controlLooperX" data-looper="go" class="looper xfade">
+    <div class="looper-inner">
+        
+        <div class="item"><div class="one_room_pic st_1"></div></div>
+        <div class="item"><div class="one_room_pic st_2"></div></div>
+        <div class="item"><div class="one_room_pic st_3"></div></div>
+        <div class="item"><div class="one_room_pic st_4"></div></div>
+        <div class="item"><div class="one_room_pic st_5"></div></div>
+        
+    </div>
+   
+</div>
+</section>
+
+		
+
+
+
+			<section class="pluses">
+				<div class="pluses_marker" style="position: absolute; background: red; width: 5px; height: 5px; margin-top: -50%;z-index: 6;visibility: hidden; "></div>
+			<div class="pluses_inner">
+				<div class="one_plus first_plus" id="pl1">
+					<div class="plus_icon icon_1"></div>
+					<div class="plus_text">
+						<div class="text_h">Расположение</div>
+Отель находится в 200 метрах от ближайшего подъемника по равнинной местности
+</div>
+				</div>
+				<div class="one_plus" id="pl2">
+					<div class="plus_icon icon_2"></div>
+					<div class="plus_text">
+						<div class="text_h">Эко материалы</div>
+Материалы, используемые при строительстве, а так же мебель и оборудование не содержат вредных веществ.
+</div>
+				</div>
+				<div class="one_plus" id="pl3">
+					<div class="plus_icon icon_3"></div>
+					<div class="plus_text">
+						<div class="text_h">Японская баня</div>
+После активного катания по горным склонам отдохните в нашей японской бане (работает в зимнее время)</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</section>
+		
+		
+	
+ 		      <script>
+	$(document).ready(function () {
+    var rmarker = $('.pluses_marker');
+
+    $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        var z = $('.pluses_marker').offset().top;
+
+        if (y >= z) {
+	        
+	         setTimeout(function(){ 
+            $('#pl1').addClass('fadeTop');
+             }, 300);
+             
+             setTimeout(function(){ 
+            $('#pl2').addClass('fadeTop');
+             }, 400);
+             
+             setTimeout(function(){ 
+            $('#pl3').addClass('fadeTop');
+             }, 600);
+        }
+        
+    });
+    });
+</script>	
+		
+	
+		
+		
+		
+	<section class="rooms">
+		<div class="room_marker" style="position: absolute; background: red; width: 35px; height: 35px; margin-top: -30%;z-index: 26; visibility: hidden;"></div>
+		<div class="room_marker2" style="position: absolute; background: red; width: 5px; height: 5px; margin-top: -70px;z-index: 26; visibility: hidden;"></div>
+		<div class="room_c"></div>
+		
+
+
+		
+		
+		
+		<div class="room_a" >
+			
+			
+			<div class="next_cont">
+				<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooper"></a></div>
+				<div class="for_link"></div>
+				<div class="papa bouncex"></div>
+			</div>
+			
+				
+				
+			
+			
+			<div class="overrooms">
+				
+				
+				<div class="rooms_inner">
+			     <div id="to_b" class="switch">View Family Room</div>
+			 
+		 <div class="room_side">
+			 <div class="inside">
+				 <div class="room_name">Standard</div>
+				 <div class="room_price">1 700 UAH</div>
+				 <div class="clear"></div>
+				 <div class="room_anno">
+					 Стандартный номер с балконом и видом на горы<br>
+					 отлично подойдет как для одного человека, так<br> 
+					 и для семьи с ребенком. На ваш выбор номера<br>
+	                 с двуспальной или односпальными кроватями.<br> 
+	                
+				 </div>
+				 
+				 <div class="room_params">
+					 <div class="param">Максимальная вместимость:<span> 3 человека</span></div>
+					 <div class="param">Общая площадь:<span> 23 м²</span></div>
+				 </div>
+				 
+				 <div class="inroom">
+					 <div class="inroom_head">Room contains:</div>
+					  <div class="inroom_table f_t">
+						 <ul>
+							 <li>Кабельные каналы</li>
+							 <li>SmartTV (42 дюйма)</li>
+							 <li>Рабочий стол</li>
+							 <li>Мини-бар</li>
+							 <li>Душевая кабина</li>
+							 <li>Туалет</li>
+							 
+						 </ul>
+					 </div>
+					 <div class="inroom_table">
+						 <ul>
+							 
+							 <li>Балкон</li>
+							 <li>Интернет</li>
+							  <li>Шкаф</li>
+							 <li>Тапочки</li>
+							 <li>Балкон</li>
+							 <li>Фен</li>
+						 </ul>
+					 </div>
+					
+					 
+					 <div class="clear"></div>
+				 </div>
+				 
+				 <div class="one_book">reserve</div>
+				
+			 </div>
+		 </div>
+		 
+		 </div>
+				
+				
+			</div>
+			
+			 <div id="controlLooper" data-looper="go" class="looper xfade">
+    <div class="looper-inner">
+        
+        <div class="item"><div class="one_room_pic st_4"></div></div>
+        <div class="item"><div class="one_room_pic st_5"></div></div>
+        <div class="item"><div class="one_room_pic st_3"></div></div>
+        <div class="item"><div class="one_room_pic st_2"></div></div>
+        <div class="item"><div class="one_room_pic st_1"></div></div>
+        
+    </div>
+   
+</div>
+	
+		 
+		 
+		 
+		 
+		
+		</div>
+		
+
+		
+		
+		
+		
+		
+		<div class="room_b" >
+			
+				<div class="next_cont">
+				<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooper2"></a></div>
+				<div class="for_link"></div>
+				<div class="papa bouncex"></div>
+			</div>
+			
+			
+			<div class="overrooms">
+				
+				
+				<div class="rooms_inner">
+			 <div id="to_a" class="switch">View Standard Room</div>
+			 
+		 <div class="room_side">
+			 <div class="inside">
+				 <div class="room_name">Family</div>
+				 <div class="room_price">1 700 UAH</div>
+				 <div class="clear"></div>
+				 <div class="room_anno">
+					 Стандартный номер с балконом и видом на горы<br>
+					 отлично подойдет как для одного человека, так<br> 
+					 и для семьи с ребенком. На ваш выбор номера<br>
+	                 с двуспальной или односпальными кроватями.<br> 
+	                
+				 </div>
+				 
+				 <div class="room_params">
+					 <div class="param">Максимальная вместимость:<span> 3 человека</span></div>
+					 <div class="param">Общая площадь:<span> 23 м²</span></div>
+				 </div>
+				 
+				 <div class="inroom">
+					 <div class="inroom_head">Room contains:</div>
+					  <div class="inroom_table f_t">
+						 <ul>
+							 <li>Кабельные каналы</li>
+							 <li>SmartTV (42 дюйма)</li>
+							 <li>Рабочий стол</li>
+							 <li>Мини-бар</li>
+							 <li>Душевая кабина</li>
+							 <li>Туалет</li>
+							 
+						 </ul>
+					 </div>
+					 <div class="inroom_table">
+						 <ul>
+							 
+							 <li>Балкон</li>
+							 <li>Интернет</li>
+							  <li>Шкаф</li>
+							 <li>Тапочки</li>
+							 <li>Балкон</li>
+							 <li>Фен</li>
+						 </ul>
+					 </div>
+					
+					 
+					 <div class="clear"></div>
+				 </div>
+				 
+				 <div class="one_book">reserve</div>
+				
+			 </div>
+		 </div>
+		 
+		 </div>
+				
+				
+			</div>
+			
+			 <div id="controlLooper2" data-looper="go" class="looper xfade">
+    <div class="looper-inner">
+        <div class="item"><div class="one_room_pic st_1"></div></div>
+        <div class="item"><div class="one_room_pic st_2"></div></div>
+        <div class="item"><div class="one_room_pic st_3"></div></div>
+        <div class="item"><div class="one_room_pic st_4"></div></div>
+        <div class="item"><div class="one_room_pic st_5"></div></div>
+    </div>
+   
+</div>
+	
+		 
+		 
+		 
+		 
+		
+		</div>
+		
+		
+		
+		
+	
+	</section>
+	<script>      
+      $(".one_book").click(function() {
+	  $('html, body').animate({
+        scrollTop: $("#bookme").offset().top
+    }, 700);
+    
+});
+</script>
+	
+	
+
+	
+<script>
+	$( "#to_b" ).click(function() {
+    $('.room_a').slideUp(500);
+    $('.room_b').delay(500).slideDown(500);
+     setTimeout(function(){ 
+            $('.next_cont').removeClass('slideUp3');
+             }, 450);
+     setTimeout(function(){ 
+            $('.next_cont').addClass('slideUp3');
+             }, 2000);
+             
+               setTimeout(function(){ 
+            $('.room_side').removeClass('slideRight2');
+             }, 450); 
+             
+             setTimeout(function(){ 
+            $('.room_side').addClass('slideRight2');
+             }, 1300);
+ });
+</script>
+
+<script>
+	$( "#to_a" ).click(function() {
+    $('.room_b').slideUp(500);
+    $('.room_a').delay(500).slideDown(500);
+     setTimeout(function(){ 
+            $('.next_cont').removeClass('slideUp3');
+             }, 450);
+     
+     setTimeout(function(){ 
+            $('.next_cont').addClass('slideUp3');
+             }, 2000);
+             
+            setTimeout(function(){ 
+            $('.room_side').removeClass('slideRight2');
+             }, 450); 
+             
+             
+             setTimeout(function(){ 
+            $('.room_side').addClass('slideRight2');
+             }, 1300);
+ });
+</script>	
+	
+	                
+ 
+ 
+
+ 
+ 
+
+ 		      <script>
+	$(document).ready(function () {
+    var rmarker = $('.room_marker');
+
+    $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        var z = $('.room_marker').offset().top;
+
+        if (y >= z) {
+	        
+	         setTimeout(function(){ 
+            $('.next_cont').addClass('slideUp3');
+             }, 500);
+             
+             setTimeout(function(){ 
+            $('.room_side').addClass('slideRight2');
+             }, 200);
+        }
+        
+    });
+    });
+</script>
+ 
+
+ 
+ 
+ 
+                  
+	
+	 
+   <div id="bookme" >
+	   <div class="big_header_b" style="padding-top:100px;">Booking rooms</div>
+	   
+	   
+	                
+	   
+	   <form id="clb1" method="post" action=""  class="form_check"> 
+   
+    <div class="yoho">
+	    
+	    
+	    <div class="fields">
+		    <div class="field_label">Choose room type</div>
+                     <div class="room_type rline rcheck">
+				      <div class="room_first sel">standard<input checked id="room_1" type="radio" value="standard" name="room" class="rfield off"/></div>
+			          <div class="room_second">family<input id="room_2" type="radio" value="family" name="room" class="rfield off"/></div>
+			          </div>
+<div class="clear"></div>
+
+                    <div class="inpfields">
+	                    <div class="field_label">number of persons</div>
+                       <input type="text" id="ad" name="ad" autocomplete="off" class="each min nomargin rfield" maxlength="2" onkeypress="return isNumberKey(event)" placeholder="Adults"/>
+                       <input type="text" id="kd" name="kd" autocomplete="off" class="each min nomargin last" maxlength="2" onkeypress="return isNumberKey(event)" placeholder="Kids"/>
+                       <div  class="field_label">Contact details</div>
+                       <input type="text" id="fn" name="fn" autocomplete="off" class="each rfield nomargin" placeholder="Full Name"/>
+                       <input type="text" id="ph" name="ph" autocomplete="off" class="each rfield phonefield" placeholder="Phone Number"/>
+                       </div>
+                    
+                   
+                    
+                       <button  class="booking_ok btnsubmit">reserve</button>
+                    
+                    </div>
+                    
+                    
+                    
+
+	 
+	    
+	    <div class="trigger"> <input id="datepicker" class="rfield" name="e1"/></div></div>
+    
+            <script type="text/javascript">
+                function isNumberKey(evt) {
+                    var charCode = (evt.which) ? evt.which : event.keyCode
+                    if (charCode > 31 && (charCode < 48 || charCode > 57))
+                        return false;
+                    return true;
+                }
+            </script>
+    
+    
+    
+    
+    <script>
+	$(".ov").click(function() {
+		$("#datepicker").daterangepicker("clearRange");
+		$('.all_ok').addClass('off');
+		$('.popup').addClass('off');
+		$('#ad,#kd,#fn,#ph').val('');
+		$("#room_1").attr('checked', true);
+		$("#room_2").attr('checked', false);
+		$('.sel').removeClass('sel');
+		$(".room_first").addClass('sel');
+		$('body').removeClass('noflow');
+		$('.ov').fadeOut(400);
+	});
+    </script>
+    
+    <script>
+	$(".ov2").click(function() {
+		$('.popup').addClass('off');
+		$('body').removeClass('noflow');
+		$('.ov2').fadeOut(400);
+	});
+    </script>
+    
+    
+    	<script>    
+                $('.room_first').click(function () {
+                    
+                    $('.sel').removeClass('sel');
+                    $(this).addClass('sel').find('input').prop('checked', true)
+                });
+                $('.room_second').click(function () {
+                    
+                    $('.sel').removeClass('sel');
+                    $(this).addClass('sel').find('input').prop('checked', true)
+                });
+</script>
+    
+
+    
+    
+    
+    
+      </form>
+    
+    </div>
+		
+		
+		
+		
+		
+		
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		<script>
+			var map;
+			function initialize() {
+			
+				var mapOptions = {
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					mapTypeControl: false,
+					zoom: 17,
+					zoomControl: true,
+					zoomControlOptions: {
+						style: google.maps.ZoomControlStyle.LARGE,
+						position: google.maps.ControlPosition.RIGHT_TOP
+					},
+					panControl: true,
+					panControlOptions: {
+						position: google.maps.ControlPosition.TOP_LEFT
+					},
+					streetViewControl: false,
+					scrollwheel: false,
+					scaleControl: true,
+					overviewMapControl: false,
+					center: new google.maps.LatLng(48.353961835270816, 24.420703301574687)
+				};
+				
+				map = new google.maps.Map(document.getElementById('map-canvas'),
+					mapOptions);
+				
+				var mapStyles = [{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-100},{"lightness":40}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"saturation":-10},{"lightness":30}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":10}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60},{"lightness":60}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"saturation":-100},{"lightness":60}]}];
+				
+				map.setOptions({styles: mapStyles});
+				
+				var transitLayer = new google.maps.TransitLayer();
+				transitLayer.setMap(map);
+				
+				var icon = {
+					path: 'M16.5,51s-16.5-25.119-16.5-34.327c0-9.2082,7.3873-16.673,16.5-16.673,9.113,0,16.5,7.4648,16.5,16.673,0,9.208-16.5,34.327-16.5,34.327zm0-27.462c3.7523,0,6.7941-3.0737,6.7941-6.8654,0-3.7916-3.0418-6.8654-6.7941-6.8654s-6.7941,3.0737-6.7941,6.8654c0,3.7916,3.0418,6.8654,6.7941,6.8654z',
+					anchor: new google.maps.Point(16.5, 51),
+					fillColor: '#FF0000',
+					fillOpacity: 0.7,
+					strokeWeight: 0,
+					scale: 1.33
+				};
+				
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(48.353256, 24.422377),
+					map: map,
+					icon: icon,
+					title: 'marker'
+				});
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
+			
+			function checkResize(){
+			
+				var center = map.getCenter();
+				google.maps.event.trigger(map, 'resize');
+				map.setCenter(center);
+			}
+			
+			window.onresize = checkResize;			
+		</script>
+
+<section class="mapsect">
+	<div id="map-canvas"></div>
+</section>
+
+
+	
+	
+	
+	
+	<footer>
+		<div class="footer_inner">
+		  <div class="all_fbs">
+			<div class="footer_block">
+				<div class="fbl_head">Ratings & Comments</div>
+				 
+				 <div class="fsq"></div>
+			     <div class="bok"></div>
+				 
+				 <div class="rates_anno">click on rating to read comments</div>
+			</div>
+			
+			
+			
+			<div class="footer_block">
+				<div class="fbl_head">Address</div>
+				<ul>
+					<!--<li class="fbl">Украина,</li>-->
+					<li class="fbl">Ивано-Франковская обл.,</li>
+					<li class="fbl">Яремчанский район,</li>
+				    <li class="fbl">село «Поляница»,</li>
+					<li class="fbl">участок «Вишни» д. 286</li>
+				</ul>
+			</div>
+			
+			
+			<div class="footer_block">
+				<div class="fbl_head">Hotel</div>
+				<ul>
+					<li>+38 (098) 888-81-08</li>
+					<li>hotel@monysto.com</li>
+					<li>Время работы: круглосуточно</li>
+				</ul>
+			</div>
+			
+			
+			<div class="footer_block  fbl">
+				<div class="fbl_head">Pizza</div>
+				<ul>
+					<li>+38 (097) 000-27-27</li>
+					<li>pizza@monysto.com</li>
+					<li>Время работы: 12:00-00:00</li>
+			    </ul>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div id="clear"></div>
+		  </div>
+		  <div id="clear"></div>	
+			
+			<div class="socials">
+			  <div class="socials_in">	
+				<ul>
+				 <li><a href="#"><img src="images/Facebook.png" class="sl"></a></li>
+				 <li><a href="#"><img src="images/Twitter.png" class="sl"></a></li>
+				 <li><a href="#"><img src="images/Instagram.png" class="sl"></a></li>
+				 <li><a href="#"><img src="images/Foursquare.png" class="sl"></a></li>
+				</ul>
+			 </div>
+			</div>
+			<div id="clear"></div>
+		</div>
+	</footer>
+	
+	
+
+<script>
+$.ajax({
+url: 'rates/fsq_s.php',
+success: function(data) {
+$('.fsq_s').html(data);
+}
+});
+
+$.ajax({
+url: 'rates/bok_s.php',
+success: function(data) {
+$('.bok_s').html(data);
+}
+});
+</script> <!---RATINGS START--->
+	
+
+
+<script>
+$.ajax({
+url: 'rates/fsq.php',
+success: function(data) {
+$('.fsq').html(data);
+}
+});
+
+$.ajax({
+url: 'rates/bok.php',
+success: function(data) {
+$('.bok').html(data);
+}
+});
+</script> <!---RATINGS--->	
+
+  
+  
+  
+  
+  	   <script>
+	 $(window).load(function () { $("#datepicker").daterangepicker("open"); });
+	 $(document).ready(function(){
+	     
+      $("#datepicker").daterangepicker({
+	  presetRanges:false,
+      //applyOnMenuSelect: true,
+      mirrorOnCollision: false,
+      //verticalOffset:0,
+      //autoFitCalendars:false,
+      datepickerOptions: {
+         minDate: 0,
+         firstDay: 1,
+         maxDate: "+12m +2w",
+         numberOfMonths: 2,
+         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+         monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+       }
+      });
+  
+     });
+    </script><!--DATEPICKER-->
+    
+    
+ <script src="js/is.mobile.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/formcheck.js"></script>   
+
+<script>
+	//$(window).on('load', function () {
+	
+                     	
+                     	$( document ).ready(function() {
+	                    setTimeout(function(){
+                        $('.ml').addClass("fadeTop");
+                         },50);
+                     	});
+	
+	
+	});
+</script>
+
+
+
+
+
+
+<div class="popup off" style="background:#fff url('http://androidspin.com/wp-content/uploads/2014/09/wallpaper_21.jpg') center center no-repeat; background-size: cover; border:10px solid #fff;">
+	
+</div>
+
+
+
+
+		                     <script>  
+(function($) {  
+$(function() {  
+  
+  // check cookie 
+  if (!$.cookie('was')) {  
+  
+  
+  setTimeout(function() {
+              $('body').addClass('noflow');
+              $('.popup').removeClass('off');
+              $('.ov2').fadeIn(400);
+              $('.popup').addClass('fadeTop');
+}, 5000);
+  
+   //show popup
+             
+  
+  } 
+  else{
+	  
+  } 
+  
+  $.cookie('was', true, {  
+    expires: 1,  
+    path: '/'  
+  });  
+  
+})  
+})(jQuery)  
+</script> <!--POPUP COOKIES--> 
+		                     
+
+
+
+
+
+<script>
+	$(window).scroll(function(e){
+  parallax();
+});
+function parallax(){
+  var scrolled = $(window).scrollTop();
+  $('.parallax').css('top',-(scrolled*0.35)+'px');
+}
+</script><!--PARALLAX-->
+
+
+</body>
+</html>	

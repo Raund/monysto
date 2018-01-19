@@ -1,0 +1,24 @@
+AddDefaultCharset UTF-8
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^monysto.com
+RewriteRule (.*) http://www.monysto.com/$1 [R=301,L]
+
+
+
+RewriteRule ^hotel/?$ hotel.php [NC,L] 
+RewriteRule ^hotel/ru/?$ hotel.php?lang=ru [NC,L] 
+RewriteRule ^hotel/ua/?$ hotel.php?lang=ua [NC,L]
+RewriteRule ^hotel/en/?$ hotel.php?lang=en [NC,L] 
+
+
+
+RewriteRule ^pizza/?$ pizza.php [NC,L] 
+RewriteRule ^pizza/ru/?$ pizza.php?lang=ru [NC,L] 
+RewriteRule ^pizza/ua/?$ pizza.php?lang=ua [NC,L]
+RewriteRule ^pizza/en/?$ pizza.php?lang=en [NC,L]
+
+
+
+
