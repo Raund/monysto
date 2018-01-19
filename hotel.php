@@ -20,6 +20,7 @@
 <meta name="viewport" content="width=1200" >
 <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="css/style2.css" rel="stylesheet" type="text/css" media="screen,print"/>
+<link href="css/r-adaptive-style.css" rel="stylesheet" type="text/css" media="screen,print"/>
 <link href="css/animation.css" rel="stylesheet" type="text/css" media="screen"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
