@@ -103,6 +103,11 @@
     .nav ul li{
         margin-left: 20px;
     }
+    .overlay > div{
+        width: 80% !important;
+        left: 10% !important;
+        margin-left: 0 !important;
+    }
 }
 @media (max-width: 991px) {
     .intop{
@@ -143,12 +148,21 @@
         line-height: 40px;
         border-bottom: 1px solid #ccc;
     }
+    .overlay > div{
+        font-size: 70px !important;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
         width: 40%;
         left: 30%;
-      }    
+    } 
+    .overlay > div{
+        font-size: 50px !important;
+    }
+    .ml{
+        width: 320px;
+    }
 }
 @media (max-width: 320px) {
     .top_logo{

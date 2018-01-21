@@ -1,12 +1,8 @@
 <?
-
 	include('langs/l.php');
 	include('system/system.php'); //prices etc
 	//include('startcash.php');
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +23,6 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-
 <!--
 
 <meta property = "og:title" content = "Монисто" />
@@ -37,8 +32,6 @@
 <meta property="og:url" content="http://monysto.com" />
 
 -->
-
-
 
 <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/momentjs/2.3.1/moment.min.js"></script>
@@ -66,14 +59,9 @@ ga('send', 'pageview');
 
 </script>
 
-
-
 </head>
 
-
 <body>
-
-
 
 <div class="seasons off">
 	<div class="close_seasons"></div>
@@ -102,112 +90,95 @@ ga('send', 'pageview');
 	
 	</div>
 </div>	
-
-
-	
-	
-
-
 <div class="all_ok off">
-	                    <div class="message"><?print $lang['THANKYOU_HEADER'];?></div>
-	                    <div class="mes_comm"><?print $lang['THANKYOU_ANNO'];?></div>
-                    </div>
-	                <div class="ov"></div>
-	                <div class="ov2"></div>
+	<div class="message"><?print $lang['THANKYOU_HEADER'];?></div>
+	<div class="mes_comm"><?print $lang['THANKYOU_ANNO'];?></div>
+</div>
+<div class="ov"></div>
+<div class="ov2"></div>
 	                
-	                <script>
-		      //          $('body').addClass('noflow');
-              //$('.all_ok').removeClass('off');
-              //$('.ov').fadeIn(400);
-              //$('.all_ok').addClass('fadeTop');
-	                </script>
+<script>
+	//          $('body').addClass('noflow');
+	//$('.all_ok').removeClass('off');
+	//$('.ov').fadeIn(400);
+	//$('.all_ok').addClass('fadeTop');
+</script>
 
 
 	
 <script>
-jQuery(document).ready(function($) {
-$("#clb1").submit(function() {
-var str = $(this).serialize();
-$.ajax({
-type: "POST",
-url: "/ok.php",
-data: str,
-success: function() {
-$('').html(result);
-}
-});
-return false;
-});
-});
+	jQuery(document).ready(function($) {
+		$("#clb1").submit(function() {
+			var str = $(this).serialize();
+			$.ajax({
+				type: "POST",
+				url: "/ok.php",
+				data: str,
+				success: function() {
+					$('').html(result);
+					}
+			});
+			return false;
+		});
+	});
 </script>
-	
-	
-	<div class="top">
-		<div class="intop">
-			<div class="top_logo"></div>
-			<div class="button-menu"><div class="menu-i icon"></div>MENU</div>
-			<div class="nav">
-				<ul>
-					<li id="about"><?print $lang['ABOUT'];?></li>
-					<li id="toroom"><?print $lang['ROOMS'];?></li>
-					<li id="tobook"><?print $lang['BOOKING'];?></li>
-					<li id="contacts"><?print $lang['CONTACTS'];?></li>
-					<li><a href="http://monysto.com/pizza/"><?print $lang['PIZZA'];?></a></li>
-					<?php
+		
+<div class="top">
+	<div class="intop">
+		<div class="top_logo"></div>
+		<div class="button-menu"><div class="menu-i icon"></div>MENU</div>
+		<div class="nav">
+			<ul>
+				<li id="about"><?print $lang['ABOUT'];?></li>
+				<li id="toroom"><?print $lang['ROOMS'];?></li>
+				<li id="tobook"><?print $lang['BOOKING'];?></li>
+				<li id="contacts"><?print $lang['CONTACTS'];?></li>
+				<li><a href="http://monysto.com/pizza/"><?print $lang['PIZZA'];?></a></li>
+				<?php
 					$language = $_GET['lang'];
-					?>
-					<li>
-						<a href="http://monysto.com/blog/<?=$language?>/">
-						<?php if($language == 'en'):?>	
-						Blog
-						<?php else:?>
-						Блог
-						<?php endif;?>	
-						</a>
-					</li>
-					
-					
-					<?
-						$strSQL = "SELECT status FROM hot WHERE id=1";
-                        $rs = mysql_query($strSQL);
-                        while($row = mysql_fetch_array($rs)) {
-	                        $detect = $lang['HOT'];
-	                        $ds = $row['status'];
-	                    
-	                       if ($ds == 'on' ){
-		                       
-		                     if ($detect === 'hot offer'){
-			                     echo '';
-		                     }
-		                     else
-		                     echo '<li id="hot_offer" class="hot">'.$detect.'</li>';   
-	                        
-	                        
-	                        }
-                        
-                        
-                        
-                        }
-					?>
-					
-					
-					
-					
-				</ul>
-			</div>
-			<div class="langs_sw">
-				<ul>
-					<li><a href="http://monysto.com/hotel.php?lang=en">en</a></li>
-					<li><a href="http://monysto.com/hotel.php?lang=ua">ua</a></li>
-					<li><a href="http://monysto.com/hotel.php?lang=ru">ru</a></li>
-				</ul>
-			</div>
-			<div class="clear"></div>
+				?>
+				<li>
+					<a href="http://monysto.com/blog/<?=$language?>/">
+					<?php if($language == 'en'):?>	
+					Blog
+					<?php else:?>
+					Блог
+					<?php endif;?>	
+					</a>
+				</li>
+				
+				
+				<?
+					$strSQL = "SELECT status FROM hot WHERE id=1";
+					$rs = mysql_query($strSQL);
+					while($row = mysql_fetch_array($rs)) {
+						$detect = $lang['HOT'];
+						$ds = $row['status'];
+						if ($ds == 'on' ){
+							if ($detect === 'hot offer'){
+								echo '';
+							}
+							else
+								echo '<li id="hot_offer" class="hot">'.$detect.'</li>';   						
+						}
+					}
+				?>	
+				
+			</ul>
 		</div>
+		<div class="langs_sw">
+			<ul>
+				<li><a href="http://monysto.com/hotel.php?lang=en">en</a></li>
+				<li><a href="http://monysto.com/hotel.php?lang=ua">ua</a></li>
+				<li><a href="http://monysto.com/hotel.php?lang=ru">ru</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
 	</div>
+</div>
 	
 	
-	<script>   
+<script>   
 /**********open-close menu**************/
     $('.button-menu').click(function(){
         $(this).toggleClass('active');
@@ -216,8 +187,7 @@ return false;
     });
 /**********END open-close menu**************/
    
-	$("#about").click(function() {
-	      
+	$("#about").click(function() { 
 		setTimeout(function() {
 			$('#video').fadeOut(0);
 			}, 750);
@@ -225,50 +195,44 @@ return false;
 		$('html, body').animate({
 			scrollTop: $(".first_text").offset().top
 		}, 700);
-    
 	});
-      $("#toroom").click(function() {
-	        setTimeout(function() {
-	      $('#video').fadeOut(0);
-          }, 750);
-	$('html, body').animate({
-        scrollTop: $(".newrooms").offset().top
-    }, 700);
-    
-});
+	$("#toroom").click(function() {
+		setTimeout(function() {
+			$('#video').fadeOut(0);
+			}, 750);
+		$('html, body').animate({
+			scrollTop: $(".newrooms").offset().top
+		}, 700);
+    });
 
-      $("#tobook").click(function() {
-	        setTimeout(function() {
-	      $('#video').fadeOut(0);
-          }, 750);
-	$('html, body').animate({
-        scrollTop: $("#bookme").offset().top
-    }, 700);
-});
+	$("#tobook").click(function() {
+		setTimeout(function() {
+			$('#video').fadeOut(0);
+			}, 750);
+		$('html, body').animate({
+			scrollTop: $("#bookme").offset().top
+		}, 700);
+	});
 
-      $("#contacts").click(function() {
-	        setTimeout(function() {
-	      $('#video').fadeOut(0);
-          }, 750);
-	$('html, body').animate({
-        scrollTop: $("footer").offset().top
-    }, 700);
-});
+	$("#contacts").click(function() {
+		setTimeout(function() {
+			$('#video').fadeOut(0);
+			}, 750);
+		$('html, body').animate({
+			scrollTop: $("footer").offset().top
+		}, 700);
+	});
 
-      $("#hot_offer").click(function() {
-	      //$('#video').fadeOut(500);
-	          setTimeout(function() {
-              $('body').addClass('noflow');
-              $('.popup').removeClass('off');
-              $('.ov2').fadeIn(400);
-              $('.popup').addClass('fadeTop');
-}, 100);
-});
-</script>
-
-	
-	
-	
+	$("#hot_offer").click(function() {
+		//$('#video').fadeOut(500);
+		setTimeout(function() {
+			$('body').addClass('noflow');
+			$('.popup').removeClass('off');
+			$('.ov2').fadeIn(400);
+			$('.popup').addClass('fadeTop');
+		}, 100);
+	});
+</script>	
 
 <section class="first">
 	<div class="overfirst">
@@ -276,54 +240,44 @@ return false;
 		<div class="swiper-pagination swiper-pagination-white superpages"></div>
 	</div> 
 
-
-
-
-
 	<div id="video">
 		<?include ('video.php')?>
 	</div>
 
-
-
 	<div class="startdown"><div class="mama bouncexdown"></div></div>
 	<script>      
-	$(".startdown").click(function() {
-		setTimeout(function() {
-		$('#video').fadeOut(0);
-		}, 750);
-		document.getElementById('myVideo').pause();
-	$('html, body').animate({
-	scrollTop: $(".first_text").offset().top
-	}, 450);
-
-	});
+		$(".startdown").click(function() {
+			setTimeout(function() {
+				$('#video').fadeOut(0);
+			}, 750);
+			document.getElementById('myVideo').pause();
+			$('html, body').animate({
+				scrollTop: $(".first_text").offset().top
+			}, 450);
+		});
 	</script>
-
 
 	<script>
-	$(document).ready(function () {
-	var video = $('#video');
+		$(document).ready(function () {
+			var video = $('#video');
 
-	$(window).scroll(function () {
-	var y = $(this).scrollTop();
-	var z = $('.first_text').offset().top;
+			$(window).scroll(function () {
+				var y = $(this).scrollTop();
+				var z = $('.first_text').offset().top;
 
-	if (y >= z) {
-		video.addClass('off');
-		video.fadeOut(0);
-		document.getElementById('myVideo').pause();
-	}
-	else{
-		video.removeClass('off');
-		video.fadeIn(0);
-		document.getElementById('myVideo').play();
-	}
-	});
-	});
+				if (y >= z) {
+					video.addClass('off');
+					video.fadeOut(0);
+					document.getElementById('myVideo').pause();
+				}
+				else{
+					video.removeClass('off');
+					video.fadeIn(0);
+					document.getElementById('myVideo').play();
+				}
+			});
+		});
 	</script>
-	
-
 	
 </section>
 
