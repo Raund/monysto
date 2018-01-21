@@ -387,6 +387,12 @@ ga('send', 'pageview');
 
 
 
+
+
+<?include('map.php');?>
+
+<?include ('footer.php');?>
+
 <script>
 	$.ajax({
 		url: 'rates/fsq_s.php',

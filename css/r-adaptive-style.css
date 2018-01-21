@@ -111,6 +111,15 @@
     .first_text_inner{
         width: 100%;
     }
+    
+    .footer_inner{
+        width: 96%;
+        padding: 80px 2%;
+    }
+    .footer_block{
+        width: 220px;
+        margin-right: 20px;
+    }
 }
 @media (max-width: 991px) {
     .intop{
@@ -132,6 +141,19 @@
     .one_plus{
         width: 255px;
         margin-left: 0;
+    }
+
+    .footer_block{
+        width: 47%;
+        min-height: 220px;
+        margin-right: 1%;
+        text-align: center;
+    }
+    .footer_block .rates{
+        margin: 15px auto;
+    }
+    .all_fbs{
+        height: 405px;
     }
 }
 @media (max-width: 768px) {
@@ -215,6 +237,18 @@
     .fsq_s .rates_x,
     .bok_s .rates_x{
         margin: 15px auto;
+    }
+
+    .footer_block{
+        float: none;
+        width: 100%;
+        min-height: initial;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .all_fbs{
+        height: initial;
     }
 }
 @media (max-width: 320px) {
