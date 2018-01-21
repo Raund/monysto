@@ -126,6 +126,13 @@
     .langs_sw ul li {
         margin-right: 1px;
     }
+    .pluses_inner{
+        width: 100%;
+    }
+    .one_plus{
+        width: 255px;
+        margin-left: 0;
+    }
 }
 @media (max-width: 768px) {
     .button-menu{
@@ -169,6 +176,14 @@
     }
     .bok_s{
         margin-left: 20px;
+    }
+    .pluses{
+        padding: 40px 0 80px;
+    }
+    .one_plus{
+        float: none;
+        width: 320px;
+        margin: 0 auto !important;
     }
 }
 @media (max-width: 425px) {

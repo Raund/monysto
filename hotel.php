@@ -335,6 +335,54 @@ ga('send', 'pageview');
 
 </section>
 
+<section class="pluses">
+	<div class="pluses_marker" style="position: absolute; background: red; width: 5px; height: 5px; margin-top: -55%;z-index: 6;visibility: hidden; "></div>
+	<div class="pluses_inner">
+		<div class="one_plus first_plus" id="pl1">
+			<div class="plus_icon icon_1"></div>
+			<div class="plus_text">
+				<div class="text_h"><?print $lang['GEO_HEADER']?></div>
+				<?print $lang['GEO_TEXT']?>
+			</div>
+		</div>
+		<div class="one_plus" id="pl2">
+			<div class="plus_icon icon_2"></div>
+			<div class="plus_text">
+				<div class="text_h"><?print $lang['ECO_HEADER']?></div>
+				<?print $lang['ECO_TEXT']?>
+			</div>
+		</div>
+		<div class="one_plus" id="pl3">
+			<div class="plus_icon icon_3"></div>
+			<div class="plus_text">
+				<div class="text_h"><?print $lang['BATH_HEADER']?></div>
+				<?print $lang['BATH_TEXT']?>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>		
+	
+<script>
+	$(document).ready(function () {
+    	var rmarker = $('.pluses_marker');
+		$(window).scroll(function () {
+			var y = $(this).scrollTop();
+			var z = $('.pluses_marker').offset().top;
+			if (y >= z) {
+				setTimeout(function(){ 
+					$('#pl1').addClass('fadeTop');
+				}, 200);	
+				setTimeout(function(){ 
+					$('#pl2').addClass('fadeTop');
+				}, 400);				
+				setTimeout(function(){ 
+					$('#pl3').addClass('fadeTop');
+				}, 600);
+			}
+		});
+    });
+</script>	
 
 
 
