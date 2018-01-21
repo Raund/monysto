@@ -108,6 +108,9 @@
         left: 10% !important;
         margin-left: 0 !important;
     }
+    .first_text_inner{
+        width: 100%;
+    }
 }
 @media (max-width: 991px) {
     .intop{
@@ -151,6 +154,15 @@
     .overlay > div{
         font-size: 70px !important;
     }
+    .first_text_inner{
+        padding: 80px 0 30px 0;
+    }
+    .about_text_b{
+        width: 90%;
+    }
+    .orn{
+        margin: 40px auto 20px;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
@@ -162,6 +174,9 @@
     }
     .ml{
         width: 320px;
+    }
+    .big_header_b{
+        font-size: 36px;
     }
 }
 @media (max-width: 320px) {

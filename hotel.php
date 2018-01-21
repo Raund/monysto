@@ -168,9 +168,9 @@ ga('send', 'pageview');
 		</div>
 		<div class="langs_sw">
 			<ul>
-				<li><a href="http://monysto.com/hotel.php?lang=en">en</a></li>
-				<li><a href="http://monysto.com/hotel.php?lang=ua">ua</a></li>
-				<li><a href="http://monysto.com/hotel.php?lang=ru">ru</a></li>
+				<li><a href="http://monysto.loc/hotel.php?lang=en">en</a></li>
+				<li><a href="http://monysto.loc/hotel.php?lang=ua">ua</a></li>
+				<li><a href="http://monysto.loc/hotel.php?lang=ru">ru</a></li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -280,6 +280,16 @@ ga('send', 'pageview');
 	</script>
 	
 </section>
+
+<section class="first_text">
+	<div class="first_text_inner">
+		<div class="big_header_b"><?print $lang['ABOUT_HOTEL_HEADER']?></div>
+		<div class="about_text_b">
+			<?print $lang['ABOUT_HOTEL_TEXT']?>
+		</div>
+		<div class="orn"></div>
+	</div>
+</section>	
 
 
 
