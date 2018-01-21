@@ -179,13 +179,13 @@ ga('send', 'pageview');
 	
 	
 <script>   
-/**********open-close menu**************/
+	/**********open-close menu**************/
     $('.button-menu').click(function(){
         $(this).toggleClass('active');
         $('.nav').toggleClass('active');
         $('.button-menu .icon').toggleClass('menu-i').toggleClass('close');
     });
-/**********END open-close menu**************/
+	/**********END open-close menu**************/
    
 	$("#about").click(function() { 
 		setTimeout(function() {
@@ -291,12 +291,213 @@ ga('send', 'pageview');
 	</div>
 </section>	
 
+<section class="ttt">
+	
+	<div id="startrates" style="position:absolute;z-index:5;  width: 455px; left:50%; margin-left: -228px; bottom:10%; visibility: hidden; ">
+		<div class="fsq_s"></div>
+		<div class="bok_s"></div>
+		<div class="clear"></div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			var rmarker = $('.ttt');
+			$(window).scroll(function () {
+				var y = $(this).scrollTop();
+				var z = $('.ttt').offset().top;
+				if (y >= z) {
+					setTimeout(function(){ 
+						$('#startrates').addClass('slideUp3');
+					}, 0);					
+				}	
+			});
+		});
+	</script>
+
+	<div class="next_cont_hotel_next">
+		<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooperX"></a></div>
+		<div class="for_link"></div>
+		<div class="papa bouncex"></div>
+	</div>
+	
+	<div class="next_cont_hotel_prev">
+		<div class="next_link"><a  data-looper="prev" class="superlink"  href="#controlLooperX"></a></div>
+		<div class="for_link"></div>
+		<div class="papa2 bouncex2"></div>
+	</div>
+
+	<div id="controlLooperX" data-looper="go" class="looper xfade">
+		<div class="looper-inner">
+			<div class="item"><div class="one_room_pic st_1 htx_1"></div></div>
+			<div class="item"><div class="one_room_pic st_2 htx_2"></div></div>
+			<div class="item"><div class="one_room_pic st_3 htx_3"></div></div>        
+		</div>
+	</div>
+
+</section>
 
 
 
+
+
+<script>
+	$.ajax({
+		url: 'rates/fsq_s.php',
+		success: function(data) {
+			$('.fsq_s').html(data);
+		}
+	});
+
+	$.ajax({
+		url: 'rates/bok_s.php',
+		success: function(data) {
+			$('.bok_s').html(data);
+		}
+	});
+</script> <!---RATINGS START--->
+	
+
+
+<script>
+	$.ajax({
+		url: 'rates/fsq.php',
+		success: function(data) {
+			$('.fsq').html(data);
+		}
+	});
+
+	$.ajax({
+		url: 'rates/bok.php',
+		success: function(data) {
+			$('.bok').html(data);
+		}
+	});
+</script> <!---RATINGS--->	
   
+<script>
+	$(window).load(function () { $("#datepicker").daterangepicker("open"); });
+	$(document).ready(function(){
+		$("#datepicker").daterangepicker({
+			presetRanges:false,
+			//applyOnMenuSelect: true,
+			mirrorOnCollision: false,
+			//verticalOffset:0,
+			//autoFitCalendars:false,      
+			datepickerOptions: {
+				minDate: 0,
+				maxDate: "+12m +2w",
+				numberOfMonths: 2,
+				<?print $lang['CALENDAR']?>
+			}      
+      	});
+	});
+</script><!--DATEPICKER-->
+    
+<script src="js/is.mobile.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/formcheck.js"></script>   
 
+<script>
+	//$(window).on('load', function () {
+                     	
+	$( document ).ready(function() {
+		setTimeout(function(){
+			$('.ml').addClass("fadeTop");
+		},50);
+	});
+	
+	});
+</script>
+
+<?
+	$source = mysql_query("SELECT * FROM hot  WHERE id='1'");
+    while($rowx = mysql_fetch_array($source)){
+		$head = $rowx["$hot_title"];
+		$text = $rowx["$hot_text"];
+	}
+	
+	
+?>
+
+<div class="popup off" style="background:#fff">
+	<div class="hot_head"><?print $head;?></div>
+	<div class="hot_text"><?print $text;?></div>
+</div>
+
+<?
+	if ($ds === 'on'){
+		if ($detect != 'hot offer'){?>
+		
+		<script>  
+			(function($) {  
+				$(function() {  
+					// check cookie 
+					if (!$.cookie('was')) {  
+						setTimeout(function() {
+									$('body').addClass('noflow');
+									$('.popup').removeClass('off');
+									$('.ov2').fadeIn(400);
+									$('.popup').addClass('fadeTop');
+						}, 5000);
+   					//show popup  
+  					} else {} 
   
+					$.cookie('was', true, {  
+						expires: 1,  
+						path: '/'  
+					});  
+				})  
+			})(jQuery)  
+		</script>
+	
+		<?}
+	}
+?>
+
+<!--
+<script>  
+	(function($) {  
+		$(function() {  
+			// check cookie 
+			if (!$.cookie('was')) {   
+				setTimeout(function() {
+							$('body').addClass('noflow');
+							$('.popup').removeClass('off');
+							$('.ov2').fadeIn(400);
+							$('.popup').addClass('fadeTop');
+				}, 5000);
+				//show popup  
+  			} else {} 
+  
+			$.cookie('was', true, {  
+				expires: 1,  
+				path: '/'  
+			});  
+		})  
+	})(jQuery)  
+</script>
+-->
+
+<script>
+	$(window).scroll(function(e){
+		parallax();
+	});
+	function parallax(){
+		var scrolled = $(window).scrollTop();
+		$('.parallax').css('top',-(scrolled*0.35)+'px');
+	}
+</script><!--PARALLAX-->
+
+<?include ('analytics.php');
+		
+	$gx = preg_replace("'<plaintext>'si","",$code_google);
+	$gx2 = preg_replace("'</plaintext>'si","",$gx);
+	print $gx2;
+
+	$yx =  preg_replace("'<plaintext>'si","",$code_yandex);
+	$yx2 = preg_replace("'</plaintext>'si","",$yx);
+	print $yx2;
+
+?>
 
 
 </body>

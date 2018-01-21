@@ -163,6 +163,13 @@
     .orn{
         margin: 40px auto 20px;
     }
+    #startrates{
+        width: 420px !important;   
+        margin-left: -210px !important;
+    }
+    .bok_s{
+        margin-left: 20px;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
@@ -177,6 +184,22 @@
     }
     .big_header_b{
         font-size: 36px;
+    }
+    .ttt{
+        height: 600px;
+    }
+    #startrates{
+        width: 320px !important;   
+        margin-left: -160px !important;
+    }
+    .fsq_s,
+    .bok_s{
+        float: none;
+        margin-left: 0;
+    }
+    .fsq_s .rates_x,
+    .bok_s .rates_x{
+        margin: 15px auto;
     }
 }
 @media (max-width: 320px) {
