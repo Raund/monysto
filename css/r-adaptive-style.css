@@ -85,6 +85,10 @@
     background: rgba(255,255,255,0.95); 
     transition: all ease 1s;
 }
+  .button-menu_pizza.active{
+    top: 285px;
+    transition: all ease 1s;
+}
 @media (max-width: 1200px) {
     html{
         min-width: 100%;
@@ -131,6 +135,15 @@
     .comiseo-daterangepicker{
         left: 29% !important;
         z-index: 1;
+    }
+    .chief_inner{
+        width: 100%;
+    }
+    .chief_text{
+        left: 20%;
+    }
+    .food_menu_hello{
+        width: 100%;
     }
 }
 @media (max-width: 991px) {
@@ -188,6 +201,9 @@
         float: none;
         top: -250px;
         transition: all ease 1s;
+    }
+    .r-nav-pizza{
+        top: -285px;
     }
     .nav.active{
         top: 0;
