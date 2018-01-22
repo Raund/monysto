@@ -31,7 +31,7 @@ $vinecat_ids = $statement1;
 
 $alccats  = mysql_query("SELECT * FROM alc_cats WHERE status ='on'");
 while($row = mysql_fetch_array($alccats)){
-$statement2[] = $row["id"];
+$statement2[] = $row["id"]; 
 $alccat_ids = $statement2;
 }
 
@@ -102,12 +102,39 @@ $("#mcat-<?echo $cid;?>").click(function() {
 
 <script type="text/javascript">
 $(function() {
-    $(".nonImageContent .carousel").jCarouselLite({
-        btnNext: ".nonImageContent .next",
-        btnPrev: ".nonImageContent .prev",
-        visible: 5,
-        circular: false
-    });
+    var doc_w = $(document).width();
+    alert(doc_w);
+		if (doc_w < 992 && doc_w > 768) {
+            $(".nonImageContent .carousel").jCarouselLite({
+                btnNext: ".nonImageContent .next",
+                btnPrev: ".nonImageContent .prev",
+                visible: 4,
+                circular: false
+            });
+        } else 
+        if(doc_w <= 768 && doc_w >= 425){
+            $(".nonImageContent .carousel").jCarouselLite({
+                btnNext: ".nonImageContent .next",
+                btnPrev: ".nonImageContent .prev",
+                visible: 2,
+                circular: false
+            });
+        } else
+        if(doc_w < 425){
+            $(".nonImageContent .carousel").jCarouselLite({
+                btnNext: ".nonImageContent .next",
+                btnPrev: ".nonImageContent .prev",
+                visible: 1,
+                circular: false
+            });
+        } else {
+            $(".nonImageContent .carousel").jCarouselLite({
+                btnNext: ".nonImageContent .next",
+                btnPrev: ".nonImageContent .prev",
+                visible: 5,
+                circular: false
+            });
+        }
 });
 </script>
 

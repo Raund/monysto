@@ -369,7 +369,7 @@ ga('send', 'pageview');
 	</div>
 </section>
 			
-<!-- <?include('menu_x.php');?> -->
+<?include('menu_x.php');?>
 	
 <section class="table_reserve">
 	<div id="res_table_marker" style="width: 5px; height: 5px; position: absolute; margin-top: -70px; visibility: hidden;"></div>

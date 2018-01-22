@@ -187,6 +187,27 @@
     .ui-datepicker{
         width: auto !important;
     }
+    .custom-container{
+        width: 760px;
+    }
+    .mf_n,
+    .mf_p{
+        width: 40px;
+        margin: 25px 0 0;
+        background-size: contain;
+    }
+    .food_menu_inner{
+        width: 90%;
+    }
+    .food_menu_right{
+        width: 100%;
+    }
+    .food_cat{
+        width: 100%;
+    }
+    .inmenu{
+        width: 100%;
+    }
 }
 @media (max-width: 768px) {
     .button-menu{
@@ -334,6 +355,18 @@
         left: 10%;
         text-align: center;
     }
+    .custom-container{
+        width: 425px;
+    }
+    .food_name{
+        width: 100%;
+    }
+    .one_food{
+        padding-bottom: 10px;
+    }
+    .food_main_info{
+        height: auto;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
@@ -456,6 +489,12 @@
     }
     .pizza_ok{
         width: 248px;
+    }
+    .custom-container{
+        width: 250px;
+    }
+    .menuname{
+        font-size: 16px;
     }
 }
 @media (max-width: 320px) {
