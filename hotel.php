@@ -133,7 +133,7 @@ ga('send', 'pageview');
 				<li id="toroom"><?print $lang['ROOMS'];?></li>
 				<li id="tobook"><?print $lang['BOOKING'];?></li>
 				<li id="contacts"><?print $lang['CONTACTS'];?></li>
-				<li><a href="http://monysto.com/pizza/"><?print $lang['PIZZA'];?></a></li>
+				<li><a href="http://monysto.loc/pizza/"><?print $lang['PIZZA'];?></a></li>
 				<?php
 					$language = $_GET['lang'];
 				?>
