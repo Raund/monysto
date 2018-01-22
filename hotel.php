@@ -597,22 +597,92 @@ ga('send', 'pageview');
 		}, 700);
 	});
 </script>	
-
-<script>
-	$("#ptable, #ptable2").click(function() {
-		$('body').addClass('noflow');
-		$('.seasons').fadeIn(0).addClass("slideUp2");
-	});
-	$(".close_seasons").click(function() {
-		$('body').removeClass('noflow');
-		$('.seasons').fadeOut(400);
-		setTimeout(function(){ 
-			$('.seasons').removeClass("slideUp2");
-		}, 401);
-	});
-</script>
   
+<div id="bookme" >
+	<div class="big_header_b" style="padding-top:100px;"><?print $lang['BOOKING_HEADER']?></div>
+	<form id="clb1" method="post" action=""  class="form_check"> 
+    	<div class="yoho">
+			<div class="fields">
+			    <div class="field_label"><?print $lang['CHOOSE_ROOM_TYPE']?></div>
+				<div class="room_type rline rcheck">
+					<div class="room_first sel"><?print $lang['STANDARD_ROOM_NAME']?><input checked id="room_1" type="radio" value="standard" name="room" class="rfield off"/></div>
+					<div class="room_second"><?print $lang['FAMILY_ROOM_NAME']?><input id="room_2" type="radio" value="family" name="room" class="rfield off"/></div>
+				</div>
+				<div class="clear"></div>
+				<div class="inpfields">
+					<div class="field_label"><?print $lang['CHOOSE_PERSONS']?></div>
+					<input type="text" id="ad" name="ad" autocomplete="off" class="each min nomargin rfield" maxlength="2" onkeypress="return isNumberKey(event)" placeholder="<?print $lang['PLACEHOLDER_ADULTS']?>"/>
+					<input type="text" id="kd" name="kd" autocomplete="off" class="each min nomargin last" maxlength="2" onkeypress="return isNumberKey(event)" placeholder="<?print $lang['PLACEHOLDER_KIDS']?>"/>
+					<div  class="field_label"><?print $lang['CHOOSE_CONTACTS']?></div>
+					<input type="text" id="fn" name="fn" autocomplete="off" class="each rfield nomargin" placeholder="<?print $lang['PLACEHOLDER_NAME']?>"/>
+					<input type="text" id="ph" name="ph" autocomplete="off" class="each rfield phonefield" placeholder="<?print $lang['PLACEHOLDER_PHONE']?>"/>
+				</div>
+				<button  class="booking_ok btnsubmit"><?print $lang['TO_BOOKING']?></button>
+				<div id="ptable2" class="pricetable2"><?print $lang['SEASONS_TABLE']?></div>
+			</div>
+			<div class="trigger"> <input id="datepicker" class="rfield" name="e1"/></div>
+			
+			<script>
+				$("#ptable, #ptable2").click(function() {
+					$('body').addClass('noflow');
+					$('.seasons').fadeIn(0).addClass("slideUp2");
+				});
+				$(".close_seasons").click(function() {
+					$('body').removeClass('noflow');
+					$('.seasons').fadeOut(400);
+					setTimeout(function(){ 
+						$('.seasons').removeClass("slideUp2");
+					}, 401);
+				});
+			</script>
 
+		</div>
+
+		<script type="text/javascript">
+			function isNumberKey(evt) {
+				var charCode = (evt.which) ? evt.which : event.keyCode
+				if (charCode > 31 && (charCode < 48 || charCode > 57))
+					return false;
+				return true;
+			}
+		</script>
+			
+		<script>
+			$(".ov").click(function() {
+				$("#datepicker").daterangepicker("clearRange");
+				$('.all_ok').addClass('off');
+				$('.popup').addClass('off');
+				$('#ad,#kd,#fn,#ph').val('');
+				$("#room_1").attr('checked', true);
+				$("#room_2").attr('checked', false);
+				$('.sel').removeClass('sel');
+				$(".room_first").addClass('sel');
+				$('body').removeClass('noflow');
+				$('.ov').fadeOut(400);
+			});
+		</script>
+			
+		<script>
+			$(".ov2").click(function() {
+				$('.popup').addClass('off');
+				$('body').removeClass('noflow');
+				$('.ov2').fadeOut(400);
+			});
+		</script>
+			
+		<script>    
+			$('.room_first').click(function () {
+				$('.sel').removeClass('sel');
+				$(this).addClass('sel').find('input').prop('checked', true)
+			});
+			$('.room_second').click(function () {
+				$('.sel').removeClass('sel');
+				$(this).addClass('sel').find('input').prop('checked', true)
+			});
+		</script>
+    
+	</form>
+</div>
 
 
 
@@ -636,9 +706,7 @@ ga('send', 'pageview');
 			$('.bok_s').html(data);
 		}
 	});
-</script> <!---RATINGS START--->
-	
-
+</script> <!-- RATINGS START -->
 
 <script>
 	$.ajax({
@@ -654,24 +722,41 @@ ga('send', 'pageview');
 			$('.bok').html(data);
 		}
 	});
-</script> <!---RATINGS--->	
+</script> <!-- RATINGS -->	
   
 <script>
-	$(window).load(function () { $("#datepicker").daterangepicker("open"); });
+	$(window).load(function () { $("#datepicker").daterangepicker("open"); });	
 	$(document).ready(function(){
-		$("#datepicker").daterangepicker({
-			presetRanges:false,
-			//applyOnMenuSelect: true,
-			mirrorOnCollision: false,
-			//verticalOffset:0,
-			//autoFitCalendars:false,      
-			datepickerOptions: {
-				minDate: 0,
-				maxDate: "+12m +2w",
-				numberOfMonths: 2,
-				<?print $lang['CALENDAR']?>
-			}      
-      	});
+		var doc_w = $(document).width();
+		if (doc_w > 992) {
+			$("#datepicker").daterangepicker({
+				presetRanges:false,
+				//applyOnMenuSelect: true,
+				mirrorOnCollision: false,
+				//verticalOffset:0,
+				//autoFitCalendars:false,      
+				datepickerOptions: {
+					minDate: 0,
+					maxDate: "+12m +2w",
+					numberOfMonths: 2,
+					<?print $lang['CALENDAR']?>
+				}      
+			});
+		} else {
+			$("#datepicker").daterangepicker({
+				presetRanges:false,
+				//applyOnMenuSelect: true,
+				mirrorOnCollision: false,
+				//verticalOffset:0,
+				//autoFitCalendars:false,      
+				datepickerOptions: {
+					minDate: 0,
+					maxDate: "+12m +2w",
+					numberOfMonths: 1,
+					<?print $lang['CALENDAR']?>
+				}      
+			});
+		}
 	});
 </script><!--DATEPICKER-->
     

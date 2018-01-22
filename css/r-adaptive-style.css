@@ -120,6 +120,18 @@
         width: 220px;
         margin-right: 20px;
     }
+    .yoho{
+        width: 100% !important;
+        margin-left: 0;
+        left: 0;
+    }
+    .fields{
+        margin-left: 40px;
+    }
+    .comiseo-daterangepicker{
+        left: 29% !important;
+        z-index: 1;
+    }
 }
 @media (max-width: 991px) {
     .intop{
@@ -154,6 +166,13 @@
     }
     .all_fbs{
         height: 405px;
+    }
+    body .comiseo-daterangepicker{
+        left: 52% !important;
+        width: auto !important;
+    }
+    .ui-datepicker{
+        width: auto !important;
     }
 }
 @media (max-width: 768px) {
@@ -268,6 +287,30 @@
     .season_t3{
         width: 32.9%;
     }
+    .big_header_b{
+        padding-top: 50px !important;
+    }
+    .yoho{
+        height: 800px;
+        margin-top: 0;
+    }
+    .fields {
+        margin-left: -150px;
+        padding-left: 10px;
+        left: 50%;
+        top: 350px;
+    }
+    .trigger{
+        margin-left: 200px;
+    }
+    body .comiseo-daterangepicker {
+        left: 50% !important;
+        width: 300px !important;
+        margin-left: -150px;
+    }
+    .ui-datepicker {
+        width: 300px !important;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
@@ -281,7 +324,7 @@
         width: 320px;
     }
     .big_header_b{
-        font-size: 36px;
+        font-size: 34px;
     }
     .ttt{
         height: 600px;
