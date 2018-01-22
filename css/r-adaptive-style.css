@@ -207,6 +207,67 @@
         width: 320px;
         margin: 0 auto !important;
     }
+    .new_open{
+        width: 10%;
+    }
+    .open_icon,
+    .close_icon{
+        width: 100%;
+    }
+    .allside{
+        width: 100%;
+    }
+    .new_side{
+        width: 92%;
+    }
+    .new_close{
+        width: 7.77%;
+    }
+    .ns_content{
+        width: 100%;
+    }
+    .ns_c_in{
+        width: 100%;
+    }
+    .rtop{
+        width: 100%;
+    }
+    .rt_c{
+        width: calc(100% - 100px)
+    }
+    .rnm{
+        margin-left: -55px;
+        text-align: center;
+    }
+    .rpr{
+        margin-left: 50%;
+        font-size: 16px;
+        margin-top: -85px;
+    }
+    .rmid{
+        margin: 20px auto;
+    }
+    .rbot{
+        margin: 0 auto;
+    }
+    .slph{
+        z-index: 1;
+    }
+    .tabledata {
+        width: 90%;
+        top: 10%;
+        left: 5%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .one_table_line{
+        width: 100%;
+    }
+    .season_t1,
+    .season_t2,
+    .season_t3{
+        width: 32.9%;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
@@ -249,6 +310,61 @@
     }
     .all_fbs{
         height: initial;
+    }
+    .rmid{
+        width: 90%;
+        height: auto;
+    }
+    .rnm{
+        font-size: 28px;
+    }
+    .new_close {
+        width: 7.69%;
+    }
+    .rbot{
+        width: 90%;
+    }
+    .r-room-desc{
+        font-size: 16px !important;
+        text-align: center;
+    }
+    .r-room_params-wrap{
+        float: none !important;
+    }
+    .room_params{
+        text-align: center;
+    }
+    .pricetable{
+        float: none;
+        text-align: center;
+    }
+    .inroom_table{
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .inroom_table ul li{
+        list-style: none;
+    }
+    .ns_c_in{
+        height: auto;
+        top: 0;
+        margin: 40px 0;
+    }
+    .newrooms{
+        height: 800px;
+    }
+    .tabledata{
+        font-size: 13px;
+    }
+    .f-t-r{
+        font-size: 14px;
+    }
+    .season_t1,
+    .season_t2,
+    .season_t3{
+        width: 32.8%;
     }
 }
 @media (max-width: 320px) {

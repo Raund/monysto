@@ -385,6 +385,235 @@ ga('send', 'pageview');
 </script>	
 
 
+<?include('autoprice.php');?>
+
+
+<section class="newrooms">
+	
+	<div class="innew_1">
+		<div class="new_open"><div class="open_icon"></div></div>
+			<div class="allside">
+				<div class="new_side">
+					<div class="ns_content">
+						<div class="ns_c_in">
+								<div class="rtop">
+									<div class="rt_l" id="s1"></div>
+									<div class="rt_c">
+										<div class="rlabel">
+											<div class="rnm"><?print $lang['STANDARD_ROOM_NAME']?></div>
+											<div class="rpr"><?print $standard_p;?> <span><?print $lang['CUR'];?></span></div>
+										</div>
+									</div>
+									<div class="rt_r" id="s1x"></div>
+									<div class="clear"></div>
+								</div>				    
+								<div class="rmid">
+									<div class="r-room-desc" style="font-size: 14px; color:#899499;">
+										<?print $lang['STANDARD_ROOM_ANNO']?>
+									</div>
+									<div style="margin-top: 30px; ">
+									<?print $lang['ROOM_CONTENT_BLOCK_UL_LI']?>
+										<div class="clear"></div>  
+									</div>
+									<div class="r-room_params-wrap" style="margin-top: 20px; float:left;">
+										<div class="room_params">
+											<div class="param"><?print $lang['ROOM_MAX']?>:<span>  <?print $lang['PERSONS']?> 3</span></div>
+											<div class="param"><?print $lang['SQUARE']?>:<span> 22 <?print $lang['METERS']?></span></div>
+											<div class="param"><?print $lang['RQ']?>:<span> 1 </span></div>
+										</div>
+									</div>
+									<div id="ptable" class="pricetable"><?print $lang['SEASONS_TABLE']?></div>
+									<div class="clear"></div>
+								</div>
+
+								<div class="rbot">
+									<div class="ns_but"><?print $lang['TO_BOOKING']?></div>
+								</div>
+						</div>
+					</div>
+				</div>
+			<div class="new_close"><div class="close_icon"></div></div>
+			<div class="clear"></div>
+		</div>
+			
+		<div class="slph">
+			<div class="next_cont_hotel_next" style="margin-top: -10px!important;">
+				<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooperS1"></a></div>
+				<div class="for_link"></div>
+				<div class="papa bouncex"></div>
+			</div>
+			<div id="controlLooperS1" data-looper="go" class="looper xfade">
+				<div class="looper-inner">
+					<div class="item"><div class="one_room_pic stx_1"></div></div>
+					<div class="item"><div class="one_room_pic stx_2"></div></div>
+					<div class="item"><div class="one_room_pic stx_3"></div></div>
+					<div class="item"><div class="one_room_pic stx_4"></div></div>
+					<div class="item"><div class="one_room_pic stx_5"></div></div>        
+				</div> 
+			</div>
+		</div>
+	</div>	
+		
+	<div class="innew_2 off">
+		<div class="new_open"><div class="open_icon"></div></div>
+		<div class="allside">
+			<div class="new_side">
+				<div class="ns_content">
+					<div class="ns_c_in">
+						<div class="rtop">
+							<div class="rt_l" id="s2"></div>
+							<div class="rt_c">
+								<div class="rlabel">
+									<div class="rnm"><?print $lang['FAMILY_ROOM_NAME']?></div>
+									<div class="rpr"><?print $family_p;?> <span><?print $lang['CUR'];?></span></div>
+								</div>
+							</div>
+							<div class="rt_r" id="s2x"></div>
+							<div class="clear"></div>
+						</div>
+						<div class="rmid">
+							<div  class="r-room-desc" style="font-size: 14px; color:#899499;">
+								<?print $lang['FAMILY_ROOM_ANNO']?>
+							</div>
+							<div style="margin-top: 30px; ">
+								<?print $lang['FAMILY_ROOM_UL_LI']?>
+								<div class="clear"></div>  
+							</div>
+							<div class="r-room_params-wrap" style="margin-top: 20px; float:left;">
+								<div class="room_params">
+									<div class="param"><?print $lang['ROOM_MAX']?>:<span>  <?print $lang['PERSONS']?> 5</span></div>
+									<div class="param"><?print $lang['SQUARE']?>:<span> 32 <?print $lang['METERS']?></span></div>
+									<div class="param"><?print $lang['RQ']?>:<span> 2 </span></div>
+								</div>
+							</div>
+							<div id="ptable" class="pricetable"><?print $lang['SEASONS_TABLE']?></div>
+							<div class="clear"></div>
+						</div>
+						<div class="rbot">
+							<div class="ns_but"><?print $lang['TO_BOOKING']?></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="new_close"><div class="close_icon"></div></div>
+			<div class="clear"></div>
+		</div>
+			
+		<div class="slph">
+			<div class="next_cont_hotel_next" style="margin-top: -10px!important;">
+					<div class="next_link"><a  data-looper="next" class="superlink"  href="#controlLooperS2"></a></div>
+					<div class="for_link"></div>
+					<div class="papa bouncex"></div>
+				</div>
+			<div id="controlLooperS2" data-looper="go" class="looper xfade">
+				<div class="looper-inner">
+					<div class="item"><div class="one_room_pic fmx_1"></div></div>
+					<div class="item"><div class="one_room_pic fmx_2"></div></div>
+					<div class="item"><div class="one_room_pic fmx_3"></div></div>
+					<div class="item"><div class="one_room_pic fmx_4"></div></div>
+					<div class="item"><div class="one_room_pic fmx_5"></div></div>
+					<div class="item"><div class="one_room_pic fmx_6"></div></div>
+					<div class="item"><div class="one_room_pic fmx_7"></div></div>
+					<div class="item"><div class="one_room_pic fmx_8"></div></div>
+					<div class="item"><div class="one_room_pic fmx_9"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+</section>
+
+<script>
+	$("#s1").click(function(){
+		$(".innew_1").fadeOut(700);
+		setTimeout(function(){
+			$(".innew_2").fadeIn(700);
+		},750);
+	});	
+	$("#s1x").click(function(){
+		$(".innew_1").fadeOut(700);
+		setTimeout(function(){
+			$(".innew_2").fadeIn(700);
+		},750);
+	});
+		
+	$("#s2").click(function(){
+		$(".innew_2").fadeOut(700);
+		setTimeout(function(){
+			$(".innew_1").fadeIn(700);
+		},750);
+	});	
+
+	$("#s2x").click(function(){
+		$(".innew_2").fadeOut(700);
+		setTimeout(function(){
+			$(".innew_1").fadeIn(700);
+		},750);
+	});		
+		
+	$(".new_close").click(function(){
+		$(".allside").hide( "slide", { direction: "left"  }, 500 );
+		setTimeout(function(){
+			$(".new_open").show( "slide", { direction: "left"  }, 200 );
+		},550);
+	});
+
+	$(".new_open").click(function(){
+		$(".new_open").hide( "slide", { direction: "left"  }, 200 );
+		setTimeout(function(){
+			$(".allside").show( "slide", { direction: "left"  }, 500 );
+		},250);
+	});
+
+</script>
+
+<script src="js/rooms.js"></script>
+
+<script>
+	$(document).ready(function () {
+		var rmarker = $('.crea_marker');
+
+		$(window).scroll(function () {
+			var y = $(this).scrollTop();
+			var z = $('.crea_marker').offset().top;
+
+			if (y >= z) {
+				setTimeout(function(){ 
+					$('.next_cont_s').addClass('slideUp3');
+				}, 500);
+				setTimeout(function(){ 
+					$('.creative_side').addClass('slideRight2');
+				}, 200);
+			}
+
+		});
+	});
+</script>
+		
+<script>
+	$(".ns_but").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#bookme").offset().top
+		}, 700);
+	});
+</script>	
+
+<script>
+	$("#ptable, #ptable2").click(function() {
+		$('body').addClass('noflow');
+		$('.seasons').fadeIn(0).addClass("slideUp2");
+	});
+	$(".close_seasons").click(function() {
+		$('body').removeClass('noflow');
+		$('.seasons').fadeOut(400);
+		setTimeout(function(){ 
+			$('.seasons').removeClass("slideUp2");
+		}, 401);
+	});
+</script>
+  
+
+
 
 
 
