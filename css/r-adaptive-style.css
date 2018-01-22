@@ -219,7 +219,7 @@
         font-size: 70px !important;
     }
     .first_text_inner{
-        padding: 80px 0 30px 0;
+        padding: 40px 0 30px 0;
     }
     .about_text_b{
         width: 90%;
@@ -327,6 +327,13 @@
     .ui-datepicker {
         width: 300px !important;
     }
+    .chief_text{
+        width: 80%;
+        height: auto;
+        top: 40%;
+        left: 10%;
+        text-align: center;
+    }
 }
 @media (max-width: 425px) {
     .button-menu{
@@ -424,6 +431,31 @@
     .season_t2,
     .season_t3{
         width: 32.8%;
+    }
+    .add_inner{
+        width: 300px;
+    }
+    .rates_y{
+        width: 300px;
+        margin: 0 auto;
+        background-size: contain;
+    }
+    .rate_data_y{
+        width: 80px;
+    }
+    .trh{
+        padding-top: 60px;
+        font-size: 50px;
+    }
+    .pizza_form{
+        width: 250px;
+        padding: 20px;
+    }
+    input.each{
+        width: 225px;
+    }
+    .pizza_ok{
+        width: 248px;
     }
 }
 @media (max-width: 320px) {
