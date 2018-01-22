@@ -103,7 +103,6 @@ $("#mcat-<?echo $cid;?>").click(function() {
 <script type="text/javascript">
 $(function() {
     var doc_w = $(document).width();
-    alert(doc_w);
 		if (doc_w < 992 && doc_w > 768) {
             $(".nonImageContent .carousel").jCarouselLite({
                 btnNext: ".nonImageContent .next",
