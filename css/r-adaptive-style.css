@@ -208,6 +208,9 @@
     .inmenu{
         width: 100%;
     }
+    .seasons{
+        overflow: auto;
+    }
 }
 @media (max-width: 768px) {
     .button-menu{
@@ -311,7 +314,7 @@
     }
     .tabledata {
         width: 90%;
-        top: 10%;
+        top: 100px;
         left: 5%;
         margin-top: 0;
         margin-left: 0;
@@ -485,7 +488,7 @@
         padding: 20px;
     }
     input.each{
-        width: 225px;
+        width: 257px;
     }
     .pizza_ok{
         width: 248px;
