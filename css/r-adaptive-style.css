@@ -490,6 +490,9 @@
     input.each{
         width: 257px;
     }
+    input.each.each_pizza{
+        width: 225px;
+    }
     .pizza_ok{
         width: 248px;
     }
