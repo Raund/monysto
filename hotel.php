@@ -17,7 +17,7 @@
 <!-- <meta name="viewport" content="width=1200" > -->
 <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="css/style2.css" rel="stylesheet" type="text/css" media="screen,print"/>
-<link href="css/r-adaptive-style.css" rel="stylesheet" type="text/css" media="screen,print"/>
+<link href="css/r-adaptive-style.min.css" rel="stylesheet" type="text/css" media="screen,print"/>
 <link href="css/animation.css" rel="stylesheet" type="text/css" media="screen"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -133,7 +133,7 @@ ga('send', 'pageview');
 				<li id="toroom"><?print $lang['ROOMS'];?></li>
 				<li id="tobook"><?print $lang['BOOKING'];?></li>
 				<li id="contacts"><?print $lang['CONTACTS'];?></li>
-				<li><a href="http://monysto.loc/pizza/"><?print $lang['PIZZA'];?></a></li>
+				<li><a href="http://monysto.com/pizza/"><?print $lang['PIZZA'];?></a></li>
 				<?php
 					$language = $_GET['lang'];
 				?>
@@ -168,9 +168,9 @@ ga('send', 'pageview');
 		</div>
 		<div class="langs_sw">
 			<ul>
-				<li><a href="http://monysto.loc/hotel.php?lang=en">en</a></li>
-				<li><a href="http://monysto.loc/hotel.php?lang=ua">ua</a></li>
-				<li><a href="http://monysto.loc/hotel.php?lang=ru">ru</a></li>
+				<li><a href="http://monysto.com/hotel.php?lang=en">en</a></li>
+				<li><a href="http://monysto.com/hotel.php?lang=ua">ua</a></li>
+				<li><a href="http://monysto.com/hotel.php?lang=ru">ru</a></li>
 			</ul>
 		</div>
 		<div class="clear"></div>

@@ -19,7 +19,7 @@
 <!-- <meta name="viewport" content="width=1200" > -->
 <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="css/style2.css" rel="stylesheet" type="text/css" media="screen,print"/>
-<link href="css/r-adaptive-style.css" rel="stylesheet" type="text/css" media="screen,print"/>
+<link href="css/r-adaptive-style.min.css" rel="stylesheet" type="text/css" media="screen,print"/>
 <link href="css/animation.css" rel="stylesheet" type="text/css" media="screen"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -377,8 +377,8 @@ ga('send', 'pageview');
 	<div class="trh"><?print $lang['P_RES_HEADER'];?></div>
 	<div class="pizza_form" style="visibility: hidden;">	
 		<form id="clb1" class="form_check" method="post" action="">
-			<div class="piz_inp"><input type="text" id="fn" name="name"  autocomplete="off" class="each rfield"  placeholder="<?print $lang['P_PH_NAME'];?>"/></div>
-			<div class="piz_inp_2"><input type="text" id="ph" name="phone"  autocomplete="off" class="each rfield phonefield"  placeholder="<?print $lang['P_PH_PHONE'];?>"/></div>
+			<div class="piz_inp"><input type="text" id="fn" name="name"  autocomplete="off" class="each each_pizza rfield"  placeholder="<?print $lang['P_PH_NAME'];?>"/></div>
+			<div class="piz_inp_2"><input type="text" id="ph" name="phone"  autocomplete="off" class="each each_pizza rfield phonefield"  placeholder="<?print $lang['P_PH_PHONE'];?>"/></div>
 			<div class="clear"></div>
 			<button  class="pizza_ok btnsubmit"><?print $lang['P_PH_OK'];?></button>
 		</form>
