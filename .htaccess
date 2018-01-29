@@ -2,12 +2,12 @@ AddDefaultCharset UTF-8
 RewriteEngine On
 RewriteBase /
 
-Redirect 301 /blog/ru/gotel /hotel/
-Redirect 301 /blog/ru/pytstseryya /pizza/
-Redirect 301 /blog/ua/gotel /hotel/
-Redirect 301 /blog/ua/pytstseryya /pizza/
-Redirect 301 /blog/en/gotel /hotel/
-Redirect 301 /blog/en/pytstseryya /pizza/
+Redirect 301 /blog/ru/gotel /hotel
+Redirect 301 /blog/ru/pytstseryya /pizza
+Redirect 301 /blog/ua/gotel /hotel
+Redirect 301 /blog/ua/pytstseryya /pizza
+Redirect 301 /blog/en/gotel /hotel
+Redirect 301 /blog/en/pytstseryya /pizza
 
 RewriteCond %{HTTP_HOST} ^monysto.com
 RewriteRule (.*) http://www.monysto.com/$1 [R=301,L]
